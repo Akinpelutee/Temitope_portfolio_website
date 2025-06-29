@@ -21,7 +21,7 @@
             </nav>
             <div class="header-text">
                 <p>Data Scientist / Python developer</p>
-                <h1>Hi, I am <span>Temitope</span>Temitope<br>I'm here to solve your business problems<br>through data</h1>
+                <h1>Hi, I am <span>Temitope</span><br>I'm here to solve <br>your business problems<br>through data</h1>
 
             </div>
         </div>
@@ -47,15 +47,51 @@
                     </p>
 
                     <div class="tab-titles">
-                        <p class="tab-links active-link">Skills</p>
-                        <p class="tab-links">Experience</p>
-                        <p class="tab-links">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Data Scientist</span><br>Building machine learning models</li>
+                            <li><span>Web Scraping</span><br>Process automation with with python</li>
+                            <li><span>Django</span><br>Build and maintain APIs and backend services in python</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Jan 2025 - Jun 2025</span><br>Product Data Scientist at Growthapp.ai</li>
+                            <li><span>May 2024 - Oct 2024</span><br>Data Analyst at Renuzi ventures</li>
+                            <li><span>May 2022 - Oct 2022</span><br>Data Collation Officer</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2019 - 2023</span><br>Federal University of Agriculture Abeokuta <br>B.Sc Statistics</li>
+                        </ul>
+                    </div>
+
                 </div>
 
             </div>
 
         </div>
     </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+        }
+
+    </script>
+
 </body>
 </html>
