@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temitope Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/57168dcf7a.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
@@ -77,6 +78,82 @@
 
         </div>
     </div>
+    <!-------services----->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+               <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Data Scientist</h2>
+                <p>I am a data scientist with amny years of experience</p>
+                <a href="#">Learn more</a>
+               </div>
+               <div>
+                <i class="fa-brands fa-python"></i>
+                <h2>Python Development</h2>
+                <p>I am a data scientist with amny years of experience</p>
+                <a href="#">Learn more</a>
+               </div> 
+               <div>
+                <i class="fa-solid fa-spider"></i>
+                <h2>Web Scraping</h2>
+                <p>I am a data scientist with amny years of experience</p>
+                <a href="#">Learn more</a>
+               </div> 
+            </div>
+
+        </div>
+    </div>
+    <!-- -------Portfolio--------- -->
+     <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Portfolio</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/img1.png" height="50%">
+                    <div>
+                        <div class="layer">
+                            <h3>Bayesian A/B Testing Validation Using Synthetic Data & Hierarchical Modelling:</h3>
+                            <p>This experimental design project gives a Bayesian framework of testing between two groups,<br> which one converts better. It gave a high level of understanding of <br>how well the experimental group (ad) is better than <br>the control group (psa). I implemented the framework using prior, <br>posterior and Monte carlo.</p>
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/img3.png" height="50%">
+                    <div class="layer">
+                        <h3>House price prediction: Exploring size, location and full feature engineering with regression:</h3>
+                        <p>Three regression models was built in this project. Improving the performance of a model is paramount and also handling
+                            Multicollinearity, leaky columns and low, high cardinality columns issues and boost a model's performance.
+                        </p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/img4.png" height="50%">
+                    <div class="layer">
+                        <h3>FIFA 21 dataset cleaning with Microsoft Excel:</h3>
+                        <p>This project focuses on data cleansing with Microsoft Excel. 
+                            The power query editor was used to transformed the Fifa 21 dataset 
+                            in which I standardised the data, 
+                            removed duplicates, removed errors, cleaned the columns with 
+                            special characters to be ready for analysis and visualisation.</p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/img5.png" height="50%">
+                    <div class="layer">
+                        <h3>Data-Driven Insights into Graduate School Admissions: A Regression-Based Predictive Model</h3>
+                        <p>A multiple regression analysis was carried out in this project
+                            to create a predictive model and forecast the chance of students 
+                            gaining admission into graduate school using various predictors 
+                            such as TOEFL scores,CGPA etc. The Root Mean Square Error was 
+                            used to evaluate the model's performance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
 
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
@@ -84,11 +161,13 @@
 
         function opentab(tabname){
             for(tablink of tablinks){
-                tablink.classList.remove("active-link")
+                tablink.classList.remove("active-link");
             }
             for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab")
+                tabcontent.classList.remove("active-tab");
             }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
         }
 
     </script>
